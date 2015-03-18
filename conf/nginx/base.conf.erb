@@ -61,6 +61,9 @@ http {
       text/x-component;
     # text/html is always compressed by HttpGzipModule
 
+    # The maximum number and size of large headers to accept from a client
+    large_client_header_buffers 4 16k;
+    
     server {
         server_name localhost;
         listen <%= ENV['PORT'] %>;
